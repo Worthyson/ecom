@@ -1,12 +1,15 @@
 import { useAuthState } from "react-firebase-hooks/auth"
 import { auth } from "../firebase"
+import Product from "./Product"
+import Data from '../public/data.json'
+function Content() {
 
-function Content({title,link}) {
     const user = useAuthState(auth)
     const name = user?.displayName
+
     return (
         <div className=''>
-            <p onClick={link}>{title}</p>
+          <Product data={Data}/>  
         </div>
     )
 }
