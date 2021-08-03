@@ -18,11 +18,7 @@ function Product({data}) {
             data.slice(0,2).map(({category,title,description,content,price,images})=>(
              <ProductItems
              content={content}
-             images={images.map((image,i)=>(
-                 
-                image.url
-                 
-             ))}
+             images={images}
              title={title}
              category={category}
              description={description}
